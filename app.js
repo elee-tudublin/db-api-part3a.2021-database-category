@@ -1,6 +1,6 @@
 // require imports packages required by the application
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
 const bodyParser = require('body-parser');
 
 // Specify Host and port
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 
 
 
-// Allow app to support differnt body content types (using the bidyParser package)
+// Allow app to support differnt body content types (using the bodyParser package)
 app.use(bodyParser.text());
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support url encoded bodies
@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support url encoded bodie
 // https://codesquery.com/enable-cors-nodejs-express-app/
 // Simple Usage (Enable All CORS Requests)
 app.use(cors({ credentials: true, origin: true }));
-app.options('*', cors()) // include before other routes
+app.options('*', cors()); // include before other routes
 
 /* Configure app Routes to handle requests from browser */
 
