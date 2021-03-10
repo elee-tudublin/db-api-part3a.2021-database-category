@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 
     // Get categories
     try {
-        // Call the category service to get a list of categorys
+        // Call the category service to get a list of categories
         // getcategories() is an async function so use await
         const result = await categoryService.getCategories();
         // send json result via HTTP

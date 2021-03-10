@@ -1,8 +1,6 @@
 // Dependencies
-
 // require the database connection
 const { sql, dbConnPoolPromise } = require('../database/db.js');
-
 // models
 const Category = require('../models/category.js');
 
@@ -17,7 +15,6 @@ const SQL_SELECT_ALL = 'SELECT * FROM dbo.category ORDER BY category_name ASC fo
 // Get all products
 // This is an async function named getProducts defined using ES6 => syntax
 let getCategories = async () => {
-
     // define variable to store products
     let categories;
 
@@ -36,13 +33,9 @@ let getCategories = async () => {
     } catch (err) {
         console.log('DB Error - get all categories: ', err.message);
     }
-
     // return products
     return categories;
 };
-
-
-
 // Export 
 module.exports = {
     getCategories
